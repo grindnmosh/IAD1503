@@ -40,6 +40,7 @@
     }
 }
 
+//NPC Chat Bubbles
 - (void)openStory1:(id)sender
 {
     _story1Open.visible = TRUE;
@@ -49,6 +50,7 @@
     _x1.visible = TRUE;
 }
 
+//NPC Chat Bubbles
 - (void)closeStory1:(id)sender
 {
     _story1Open.visible = FALSE;
@@ -58,6 +60,7 @@
     _x1.visible = FALSE;
 }
 
+//NPC Chat Bubbles
 - (void)openStory2:(id)sender
 {
     _story2Open.visible = TRUE;
@@ -67,6 +70,7 @@
     _x2.visible = TRUE;
 }
 
+//NPC Chat Bubbles
 - (void)closeStory2:(id)sender
 {
     _story2Open.visible = FALSE;

@@ -13,7 +13,7 @@
     [self schedule:@selector(loadNew:) interval:5];
 }
 
-
+/// Intro flow
 -(void)loadNew:(CCTime)delta
 {
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Intro4"]];

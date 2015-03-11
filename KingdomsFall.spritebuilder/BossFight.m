@@ -37,6 +37,7 @@
     
 }
 
+//NPC Chat Bubbles for Boss threats
 -(void)bossFade:(CCTime)delta
 {
     CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:2.0f];
@@ -47,9 +48,7 @@
 }
 
 - (void)update:(CCTime)delta {
-    
-    
-    
+  
     //collision check
     CCSprite *sprite = [self spriteCollisionWithRect:_knight.boundingBox];
     if (sprite!=nil) {
@@ -59,6 +58,7 @@
     
 }
 
+//Collision Code
 -(CCSprite*)spriteCollisionWithRect:(CGRect)bounds
 {
     for (CCSprite *sprite in _spritesArray) {
@@ -83,7 +83,7 @@
     return nil;
 }
 
-
+//Movement
 - (void)touchBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     //move knight
     _knight.position = ccp(_knight.position.x, _knight.position.y);
