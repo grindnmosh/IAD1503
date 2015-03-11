@@ -31,7 +31,7 @@
 
 - (void)startGame:(id)sender
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MarchBegins"]];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Intro1"]];
 }
 
 - (void)instructions:(id)sender

@@ -94,6 +94,13 @@
 		BC5399DA1A44DCC90063F482 /* GLActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D51A44DCC90063F482 /* GLActivityKit.framework */; };
 		BC5399DB1A44DCC90063F482 /* JavaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D61A44DCC90063F482 /* JavaFoundation.framework */; };
 		BC5399DC1A44DCC90063F482 /* JavaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5399D71A44DCC90063F482 /* JavaKit.framework */; };
+		E211AEB01AAFA01400BB2F44 /* BossIntro.m in Sources */ = {isa = PBXBuildFile; fileRef = E211AEAF1AAFA01400BB2F44 /* BossIntro.m */; };
+		E225A2B51AAF514B00613A08 /* Intro1.m in Sources */ = {isa = PBXBuildFile; fileRef = E225A2B41AAF514B00613A08 /* Intro1.m */; };
+		E225A2B91AAF516700613A08 /* Intro2.m in Sources */ = {isa = PBXBuildFile; fileRef = E225A2B81AAF516700613A08 /* Intro2.m */; };
+		E225A2BC1AAF518800613A08 /* Intro3.m in Sources */ = {isa = PBXBuildFile; fileRef = E225A2BB1AAF518800613A08 /* Intro3.m */; };
+		E225A2BF1AAF51A500613A08 /* Intro4.m in Sources */ = {isa = PBXBuildFile; fileRef = E225A2BE1AAF51A500613A08 /* Intro4.m */; };
+		E225A2C21AAF51DE00613A08 /* StartPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = E225A2C11AAF51DE00613A08 /* StartPoint.m */; };
+		E225A2C51AAF51FF00613A08 /* BossFight.m in Sources */ = {isa = PBXBuildFile; fileRef = E225A2C41AAF51FF00613A08 /* BossFight.m */; };
 		E255273B1A910F2900D0B40B /* anim-knight.plist in Resources */ = {isa = PBXBuildFile; fileRef = E25527381A910F2900D0B40B /* anim-knight.plist */; };
 		E255273C1A910F2900D0B40B /* anim-knight.png in Resources */ = {isa = PBXBuildFile; fileRef = E25527391A910F2900D0B40B /* anim-knight.png */; };
 		E255273D1A910F2900D0B40B /* anim-knight.tps in Resources */ = {isa = PBXBuildFile; fileRef = E255273A1A910F2900D0B40B /* anim-knight.tps */; };
@@ -224,6 +231,20 @@
 		BC5399D61A44DCC90063F482 /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		BC5399D71A44DCC90063F482 /* JavaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaKit.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaKit.framework"; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
+		E211AEAE1AAFA01400BB2F44 /* BossIntro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossIntro.h; sourceTree = "<group>"; };
+		E211AEAF1AAFA01400BB2F44 /* BossIntro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossIntro.m; sourceTree = "<group>"; };
+		E225A2B31AAF514B00613A08 /* Intro1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intro1.h; sourceTree = "<group>"; };
+		E225A2B41AAF514B00613A08 /* Intro1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intro1.m; sourceTree = "<group>"; };
+		E225A2B71AAF516700613A08 /* Intro2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intro2.h; sourceTree = "<group>"; };
+		E225A2B81AAF516700613A08 /* Intro2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intro2.m; sourceTree = "<group>"; };
+		E225A2BA1AAF518800613A08 /* Intro3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intro3.h; sourceTree = "<group>"; };
+		E225A2BB1AAF518800613A08 /* Intro3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intro3.m; sourceTree = "<group>"; };
+		E225A2BD1AAF51A500613A08 /* Intro4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intro4.h; sourceTree = "<group>"; };
+		E225A2BE1AAF51A500613A08 /* Intro4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intro4.m; sourceTree = "<group>"; };
+		E225A2C01AAF51DE00613A08 /* StartPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPoint.h; sourceTree = "<group>"; };
+		E225A2C11AAF51DE00613A08 /* StartPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPoint.m; sourceTree = "<group>"; };
+		E225A2C31AAF51FF00613A08 /* BossFight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossFight.h; sourceTree = "<group>"; };
+		E225A2C41AAF51FF00613A08 /* BossFight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossFight.m; sourceTree = "<group>"; };
 		E25527381A910F2900D0B40B /* anim-knight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "anim-knight.plist"; sourceTree = "<group>"; };
 		E25527391A910F2900D0B40B /* anim-knight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anim-knight.png"; sourceTree = "<group>"; };
 		E255273A1A910F2900D0B40B /* anim-knight.tps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "anim-knight.tps"; sourceTree = "<group>"; };
@@ -375,6 +396,20 @@
 				E25527491A94349900D0B40B /* Instructions.m */,
 				E255274F1A943F3A00D0B40B /* GameCredits.h */,
 				E25527501A943F3A00D0B40B /* GameCredits.m */,
+				E225A2B31AAF514B00613A08 /* Intro1.h */,
+				E225A2B41AAF514B00613A08 /* Intro1.m */,
+				E225A2B71AAF516700613A08 /* Intro2.h */,
+				E225A2B81AAF516700613A08 /* Intro2.m */,
+				E225A2BA1AAF518800613A08 /* Intro3.h */,
+				E225A2BB1AAF518800613A08 /* Intro3.m */,
+				E225A2BD1AAF51A500613A08 /* Intro4.h */,
+				E225A2BE1AAF51A500613A08 /* Intro4.m */,
+				E225A2C01AAF51DE00613A08 /* StartPoint.h */,
+				E225A2C11AAF51DE00613A08 /* StartPoint.m */,
+				E225A2C31AAF51FF00613A08 /* BossFight.h */,
+				E225A2C41AAF51FF00613A08 /* BossFight.m */,
+				E211AEAE1AAFA01400BB2F44 /* BossIntro.h */,
+				E211AEAF1AAFA01400BB2F44 /* BossIntro.m */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -906,10 +941,17 @@
 				E2C71CBF1A8C17C200D110BE /* GameHud.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				E255274A1A94349900D0B40B /* Instructions.m in Sources */,
+				E225A2B51AAF514B00613A08 /* Intro1.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				E25527411A9420C700D0B40B /* MenuScene.m in Sources */,
+				E225A2C21AAF51DE00613A08 /* StartPoint.m in Sources */,
+				E211AEB01AAFA01400BB2F44 /* BossIntro.m in Sources */,
+				E225A2BF1AAF51A500613A08 /* Intro4.m in Sources */,
+				E225A2B91AAF516700613A08 /* Intro2.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				E225A2C51AAF51FF00613A08 /* BossFight.m in Sources */,
 				E2D4D80B1A813B7100388F99 /* MarchBegins.m in Sources */,
+				E225A2BC1AAF518800613A08 /* Intro3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

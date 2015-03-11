@@ -31,6 +31,7 @@
     goldAmount = 9626;
     knightHP = 500;
     [_goldLabel setString:[NSString stringWithFormat:@"%ld", (long)goldAmount]];
+    [self newGame];
 }
 
 
@@ -51,24 +52,25 @@
     CCActionAnimate *getAnimated = [CCActionAnimate actionWithAnimation:animate];
     CCActionRepeatForever *knightForever = [CCActionRepeatForever actionWithAction:getAnimated];
     [_knight runAction:knightForever];
+    _knight.position = ccp(-27.0f, 92.83f);
+    width = [[CCDirector sharedDirector] viewSize];
+    NSLog(@"%f", width.width);
+    //background music
+    [[OALSimpleAudio sharedInstance] preloadBg:@"Alters.caf"];
+    [[OALSimpleAudio sharedInstance] playBg:@"Alters.caf" loop:YES];
+    //ground array for scrolling background
 }
 
 - (id)init
 {
     if (self = [super init])
     {
-        _knight.position = ccp(-27.0f, 92.83f);
-        width = [[CCDirector sharedDirector] viewSize];
-        NSLog(@"%f", width.width);
-        //background music
-        [[OALSimpleAudio sharedInstance] preloadBg:@"Alters.caf"];
-        [[OALSimpleAudio sharedInstance] playBg:@"Alters.caf" loop:YES];
-        //ground array for scrolling background
+       
         
         
         
         
-        [self newGame];
+        
         
         
         
@@ -202,10 +204,10 @@
     
     
     
-    //Win Lose Check
-    if (_knight.position.x  >= width.width) {
-        
-        [self winning];
+    if (_knight.position.x  >= width.width)
+    {
+        [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"BossIntro"]];
+        //[self winning];
     }
     else if (knightHP <= 0)
     {
