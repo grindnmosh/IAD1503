@@ -93,7 +93,7 @@
     [_knight runAction:moveNodeRight];
     if (_knight.position.x  >= width.width)
     {
-        [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MarchBegins"]];
+        //[[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MarchBegins"]];
     }
 }
 
