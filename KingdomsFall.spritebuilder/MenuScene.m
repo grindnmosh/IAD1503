@@ -49,7 +49,7 @@
 
 - (void)startGame:(id)sender
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"BossFight"]];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Intro1"]];
 }
 
 - (void)instructions:(id)sender
