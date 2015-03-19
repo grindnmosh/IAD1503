@@ -7,12 +7,13 @@
 //
 
 #import "CCScene.h"
+#import "GoldScoreObject.h"
 
 @interface MenuScene : CCScene
 {
-    
-}
+    GoldScoreObject *listArray;
 
+}
 
 
 @end

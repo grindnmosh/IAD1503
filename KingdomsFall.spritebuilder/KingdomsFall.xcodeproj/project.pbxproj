@@ -107,7 +107,12 @@
 		E25527411A9420C700D0B40B /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E25527401A9420C700D0B40B /* MenuScene.m */; };
 		E255274A1A94349900D0B40B /* Instructions.m in Sources */ = {isa = PBXBuildFile; fileRef = E25527491A94349900D0B40B /* Instructions.m */; };
 		E25527511A943F3A00D0B40B /* GameCredits.m in Sources */ = {isa = PBXBuildFile; fileRef = E25527501A943F3A00D0B40B /* GameCredits.m */; };
+		E25D556E1AB8837B008BDFE5 /* SavingGoldScore.m in Sources */ = {isa = PBXBuildFile; fileRef = E25D556D1AB8837B008BDFE5 /* SavingGoldScore.m */; };
+		E25D55721AB88393008BDFE5 /* GoldScoreObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E25D55711AB88393008BDFE5 /* GoldScoreObject.m */; };
+		E25D55751AB89608008BDFE5 /* LocalLeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E25D55741AB89608008BDFE5 /* LocalLeader.m */; };
+		E25D55791AB91769008BDFE5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25D55781AB91769008BDFE5 /* GameKit.framework */; };
 		E266E7051A8A798400B2CD92 /* jump.caf in Resources */ = {isa = PBXBuildFile; fileRef = E266E7041A8A798400B2CD92 /* jump.caf */; };
+		E27D6EBE1AB9EBBD00FAC59A /* GCSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D6EBD1AB9EBBD00FAC59A /* GCSupport.m */; };
 		E2C71CBF1A8C17C200D110BE /* GameHud.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C71CBE1A8C17C200D110BE /* GameHud.m */; };
 		E2D4D80B1A813B7100388F99 /* MarchBegins.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D4D80A1A813B7100388F99 /* MarchBegins.m */; };
 		E2D4D81A1A81501500388F99 /* gold.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2D4D8171A81501500388F99 /* gold.wav */; };
@@ -120,6 +125,36 @@
 		E2D4D8271A815B8D00388F99 /* Alters.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2D4D8241A815B8D00388F99 /* Alters.mp3 */; };
 		E2D4D8281A815B8D00388F99 /* bgm.caf in Resources */ = {isa = PBXBuildFile; fileRef = E2D4D8251A815B8D00388F99 /* bgm.caf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		E24D22AB1AB921A8008B4B48 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.bplist;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+		E24D22AC1AB921B1008B4B48 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.bplist;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+		E24D22AD1AB921B8008B4B48 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.bplist;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		7A9790FD19E62E40001FFC4D /* PBXContainerItemProxy */ = {
@@ -254,7 +289,16 @@
 		E25527491A94349900D0B40B /* Instructions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instructions.m; sourceTree = "<group>"; };
 		E255274F1A943F3A00D0B40B /* GameCredits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCredits.h; sourceTree = "<group>"; };
 		E25527501A943F3A00D0B40B /* GameCredits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCredits.m; sourceTree = "<group>"; };
+		E25D556C1AB8837B008BDFE5 /* SavingGoldScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingGoldScore.h; sourceTree = "<group>"; };
+		E25D556D1AB8837B008BDFE5 /* SavingGoldScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingGoldScore.m; sourceTree = "<group>"; };
+		E25D55701AB88393008BDFE5 /* GoldScoreObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoldScoreObject.h; sourceTree = "<group>"; };
+		E25D55711AB88393008BDFE5 /* GoldScoreObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldScoreObject.m; sourceTree = "<group>"; };
+		E25D55731AB89608008BDFE5 /* LocalLeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalLeader.h; sourceTree = "<group>"; };
+		E25D55741AB89608008BDFE5 /* LocalLeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalLeader.m; sourceTree = "<group>"; };
+		E25D55781AB91769008BDFE5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		E266E7041A8A798400B2CD92 /* jump.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jump.caf; sourceTree = "<group>"; };
+		E27D6EBC1AB9EBBD00FAC59A /* GCSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSupport.h; sourceTree = "<group>"; };
+		E27D6EBD1AB9EBBD00FAC59A /* GCSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSupport.m; sourceTree = "<group>"; };
 		E2C71CBD1A8C17C200D110BE /* GameHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHud.h; sourceTree = "<group>"; };
 		E2C71CBE1A8C17C200D110BE /* GameHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHud.m; sourceTree = "<group>"; };
 		E2D4D8091A813B7100388F99 /* MarchBegins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarchBegins.h; path = Source/MarchBegins.h; sourceTree = "<group>"; };
@@ -314,6 +358,7 @@
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
+				E25D55791AB91769008BDFE5 /* GameKit.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
 				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
@@ -410,6 +455,14 @@
 				E225A2C41AAF51FF00613A08 /* BossFight.m */,
 				E211AEAE1AAFA01400BB2F44 /* BossIntro.h */,
 				E211AEAF1AAFA01400BB2F44 /* BossIntro.m */,
+				E25D556C1AB8837B008BDFE5 /* SavingGoldScore.h */,
+				E25D556D1AB8837B008BDFE5 /* SavingGoldScore.m */,
+				E25D55701AB88393008BDFE5 /* GoldScoreObject.h */,
+				E25D55711AB88393008BDFE5 /* GoldScoreObject.m */,
+				E25D55731AB89608008BDFE5 /* LocalLeader.h */,
+				E25D55741AB89608008BDFE5 /* LocalLeader.m */,
+				E27D6EBC1AB9EBBD00FAC59A /* GCSupport.h */,
+				E27D6EBD1AB9EBBD00FAC59A /* GCSupport.m */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -568,6 +621,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E25D55781AB91769008BDFE5 /* GameKit.framework */,
 				BC5399D31A44DCC90063F482 /* AndroidKit.framework */,
 				BC5399D41A44DCC90063F482 /* CoreJava.framework */,
 				BC5399D51A44DCC90063F482 /* GLActivityKit.framework */,
@@ -705,6 +759,9 @@
 				B77F1B2C17B978D7009739AE /* Resources */,
 			);
 			buildRules = (
+				E24D22AD1AB921B8008B4B48 /* PBXBuildRule */,
+				E24D22AC1AB921B1008B4B48 /* PBXBuildRule */,
+				E24D22AB1AB921A8008B4B48 /* PBXBuildRule */,
 			);
 			dependencies = (
 				7A97911019E6319A001FFC4D /* PBXTargetDependency */,
@@ -727,9 +784,10 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
+						DevelopmentTeam = 3M496G8L3K;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -938,11 +996,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25527511A943F3A00D0B40B /* GameCredits.m in Sources */,
+				E27D6EBE1AB9EBBD00FAC59A /* GCSupport.m in Sources */,
+				E25D55721AB88393008BDFE5 /* GoldScoreObject.m in Sources */,
 				E2C71CBF1A8C17C200D110BE /* GameHud.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				E25D55751AB89608008BDFE5 /* LocalLeader.m in Sources */,
 				E255274A1A94349900D0B40B /* Instructions.m in Sources */,
 				E225A2B51AAF514B00613A08 /* Intro1.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
+				E25D556E1AB8837B008BDFE5 /* SavingGoldScore.m in Sources */,
 				E25527411A9420C700D0B40B /* MenuScene.m in Sources */,
 				E225A2C21AAF51DE00613A08 /* StartPoint.m in Sources */,
 				E211AEB01AAFA01400BB2F44 /* BossIntro.m in Sources */,
@@ -1232,11 +1294,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ezibyte/ezisocial/ios",
+					"$(PROJECT_DIR)/ezibyte/ezisocial/ios/Facebook-SDK-3.13.1",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -1267,11 +1336,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ezibyte/ezisocial/ios",
+					"$(PROJECT_DIR)/ezibyte/ezisocial/ios/Facebook-SDK-3.13.1",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (

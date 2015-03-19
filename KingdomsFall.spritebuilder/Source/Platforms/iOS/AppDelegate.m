@@ -24,7 +24,7 @@
  */
 
 #import "cocos2d.h"
-
+#import "GCSupport.h"
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 
@@ -48,6 +48,10 @@
     
     // Configure CCFileUtils to work with SpriteBuilder
     [CCBReader configureCCFileUtils];
+    
+    
+    [[GCSupport sharedInstance] authenticateLocalUser];
+    
     
     // Do any extra configuration of Cocos2d here (the example line changes the pixel format for faster rendering, but with less colors)
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];

@@ -7,9 +7,13 @@
 //
 
 #import "BossFight.h"
+#import "GoldScoreObject.h"
+#import "GCSupport.h"
 
 @implementation BossFight
+
 - (void)didLoadFromCCB {
+    
     _spritesArray = [NSMutableArray arrayWithObjects:_reaper, nil];
     self.userInteractionEnabled = TRUE;
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"anim-knight.plist"];
@@ -33,8 +37,13 @@
     goldAmount = 10626;
     knightHP = 500;
     [_goldLabel setString:[NSString stringWithFormat:@"%ld", (long)goldAmount]];
-    
-    
+    _menuButton.visible = false;
+    //win lose labels
+    _winner.visible = false;
+    _gameOver.visible = false;
+    _initials.visible = false;
+    _subButt.visible = false;
+    _highScore.visible = false;
 }
 
 //NPC Chat Bubbles for Boss threats
@@ -93,8 +102,93 @@
     [_knight runAction:moveNodeRight];
     if (_knight.position.x  >= width.width)
     {
-        //[[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MarchBegins"]];
+        [self winning];
+    }
+    
+    else if (knightHP <= 0)
+    {
+        [self losing];
     }
 }
+
+//Method for level completyion
+-(void)winning
+{
+    GCSupport *score = [GCSupport alloc];
+    score = [GCSupport sharedInstance];
+    _winner.visible = true;
+    goldAmount = goldAmount+2500;
+    score.goldPass = &(goldAmount);
+    NSLog(@"Gold:%ld", (long)goldAmount);
+    [_goldLabel setString:[NSString stringWithFormat:@"%ld", (long)goldAmount]];
+    
+    _menuButton.visible = true;
+    _initials.visible = true;
+    _subButt.visible = true;
+    _highScore.visible = true;
+    [score reportScore];
+}
+
+//Method for dead knight
+-(void)losing
+{
+    _gameOver.visible = true;
+    goldAmount = 0;
+    NSLog(@"Gold:%ld", (long)goldAmount);
+    [_goldLabel setString:[NSString stringWithFormat:@"%ld", (long)goldAmount]];
+    [[CCDirector sharedDirector] pause];
+}
+
+- (void)backToMenu:(id)sender
+{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
+}
+
+-(void)highScoreScreen:(id)sender
+{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"PersonalLeaderBoard"]];
+}
+
+-(void)submit:(id)sender
+{
+    NSString *pNameI = [_initials string];
+    NSString *pGameGold = [_goldLabel string];
+    GoldScoreObject *load = [[GoldScoreObject alloc] initWithGold:pNameI gold:pGameGold];
+    GoldScoreObject *database = [GoldScoreObject sharedGoldArray];
+    NSMutableArray *list = database.goldPiles;
+    if (list != nil) {
+        [list addObject:load];
+    }
+    listArray= [GoldScoreObject sharedGoldArray];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults != nil)
+    {
+        int im = 0;
+        continuos1 =[[NSMutableArray alloc] init];
+        continuos2 =[[NSMutableArray alloc] init];
+        for (int i =0; i < [listArray.goldPiles count]; i++)
+        {
+            
+            NSString *load1 = [[listArray.goldPiles objectAtIndex:i] initials];
+            NSString *load2 = [[listArray.goldPiles objectAtIndex:i] gameGold];
+            
+            im++;
+            if (load1 != nil)
+            {
+                [continuos1 addObject:load1];
+                [continuos2 addObject:load2];
+                
+            }
+        }
+        
+        NSLog(@"%@", continuos1);
+        [[NSUserDefaults standardUserDefaults]setObject:continuos1 forKey:@"player"];
+        [[NSUserDefaults standardUserDefaults]setObject:continuos2 forKey:@"gold"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"PersonalLeaderBoard"]];
+    }
+}
+
+
 
 @end

@@ -8,6 +8,8 @@
 
 #import "MenuScene.h"
 #import "MarchBegins.h"
+#import "GoldScoreObject.h"
+
 
 
 @implementation MenuScene
@@ -19,6 +21,22 @@
     
     //enable touch
     self.userInteractionEnabled = TRUE;
+    
+    NSMutableArray *player = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"player"] mutableCopy];
+    NSMutableArray *gold = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"gold"] mutableCopy];
+    for (int i = 0; i < [player count]; i++)
+    {
+        NSString *initials = [player objectAtIndex:i];
+        NSString *gameGold = [gold objectAtIndex:i];
+        GoldScoreObject *load = [[GoldScoreObject alloc] initWithGold:initials gold:gameGold];
+        GoldScoreObject *database = [GoldScoreObject sharedGoldArray];
+        NSMutableArray *list = database.goldPiles;
+        if (list != nil) {
+            [list addObject:load];
+        }
+        listArray = [GoldScoreObject sharedGoldArray];
+    }
+    
 }
 
 - (id) init
@@ -31,7 +49,7 @@
 
 - (void)startGame:(id)sender
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Intro1"]];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"BossFight"]];
 }
 
 - (void)instructions:(id)sender
@@ -43,6 +61,8 @@
 {
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameCredits"]];
 }
+
+
 
 
 @end

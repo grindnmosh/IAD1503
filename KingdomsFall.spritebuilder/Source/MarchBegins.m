@@ -23,10 +23,7 @@
     _death1.visible = false;
     _death2.visible = false;
     _gainGold.visible =false;
-    _menuButton.visible = false;
-    //win lose labels
-    _winner.visible = false;
-    _gameOver.visible = false;
+
     //GH = [[GameHud alloc] init];
     goldAmount = 9626;
     knightHP = 500;
@@ -209,39 +206,11 @@
         [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"BossIntro"]];
         //[self winning];
     }
-    else if (knightHP <= 0)
-    {
-        [self losing];
-    }
+    
     
 }
 
-//Method for level completyion
--(void)winning
-{
-    _winner.visible = true;
-    goldAmount = goldAmount+2500;
-    NSLog(@"Gold:%ld", (long)goldAmount);
-    [_goldLabel setString:[NSString stringWithFormat:@"%ld", (long)goldAmount]];
-    [[CCDirector sharedDirector] pause];
-    _menuButton.visible = true;
-}
 
-//Method for dead knight
--(void)losing
-{
-    _gameOver.visible = true;
-    goldAmount = 0;
-    NSLog(@"Gold:%ld", (long)goldAmount);
-    [_goldLabel setString:[NSString stringWithFormat:@"%ld", (long)goldAmount]];
-    [[CCDirector sharedDirector] pause];
-}
-
-- (void)backToMenu:(id)sender
-{
-    [[CCDirector sharedDirector] replaceScene:[MarchBegins node]];
-    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
-}
 
 
 @end

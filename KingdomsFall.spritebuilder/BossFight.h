@@ -7,9 +7,13 @@
 //
 
 #import "CCScene.h"
+#import "GoldScoreObject.h"
+#import "SavingGoldScore.h"
+#import "GCSupport.h"
 
 @interface BossFight : CCScene
 {
+    GoldScoreObject *listArray;
     CCNode *_knight;
     CCNode *_bossBubble;
     CCNode *_bossText;
@@ -19,6 +23,15 @@
     CCLabelTTF *_goldLabel;
     NSMutableArray* _spritesArray;
     NSInteger goldAmount;
+    NSInteger goldAmountFinal;
+    CCLabelTTF *_winner;
+    CCButton *_menuButton;
+    CCLabelTTF *_gameOver;
+    CCLabelTTF *_initials;
+    CCButton *_subButt;
+    CCButton *_highScore;
+    NSMutableArray *continuos1;
+    NSMutableArray *continuos2;
 }
 
 @end

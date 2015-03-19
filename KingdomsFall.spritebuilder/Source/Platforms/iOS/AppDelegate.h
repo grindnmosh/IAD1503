@@ -28,6 +28,8 @@
 
 @interface AppController : CCAppDelegate
 {
+    
 }
+
 
 @end
