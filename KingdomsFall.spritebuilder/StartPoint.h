@@ -23,5 +23,6 @@
     CCButton *_x2;
     CCButton *_dot1;
     CCButton *_dot2;
+    BOOL talked;
 }
 @end

@@ -9,13 +9,20 @@
 #import "MenuScene.h"
 #import "MarchBegins.h"
 #import "GoldScoreObject.h"
-
-
+#import "GCSupport.h"
 
 @implementation MenuScene
 
 - (void)didLoadFromCCB {
+    //code for testing
+    [GKAchievement resetAchievementsWithCompletionHandler:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+    }];
+    //Code for testing end
     
+    //BG Music
     [[OALSimpleAudio sharedInstance] preloadBg:@"Alters.caf"];
     [[OALSimpleAudio sharedInstance] playBg:@"Alters.caf" loop:YES];
     

@@ -9,6 +9,7 @@
 #import "MarchBegins.h"
 #import "GameHud.h"
 #import <AVFoundation/AVFoundation.h>
+#import "GCSupport.h"
 
 //static const CGFloat scrollSpeed = 80.f;
 
@@ -126,6 +127,27 @@
                 CCActionSequence *die = [CCActionSequence actions:show, fadeOut, hide, nil];
                 [_gainGold runAction:die];
                 
+                NSString *achievementIdentifier = @"KF2000FK";
+                NSString *level1Id = @"KF111FK";
+                
+                
+                GKAchievement *gold2k = [[GKAchievement alloc] initWithIdentifier:achievementIdentifier];
+                GKAchievement *level1 = [[GKAchievement alloc] initWithIdentifier:level1Id];
+                
+                
+                
+                gold2k.percentComplete = 100;
+                level1.percentComplete = 33;
+                
+                NSArray *achieved = @[gold2k, level1];
+                [GKAchievement reportAchievements:achieved withCompletionHandler:^(NSError *error) {
+                    if (error != nil) {
+                        NSLog(@"%@", [error localizedDescription]);
+                    }
+                }];
+
+                gold2k.showsCompletionBanner = YES;
+                level1.showsCompletionBanner = YES;
             }
             else if (sprite == _darkSpirit)
             {
@@ -137,6 +159,26 @@
                 CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:2.0f];
                 CCActionHide *hide = [CCActionHide action];
                 CCActionSequence *die = [CCActionSequence actions:show, fadeOut, hide, nil];
+                
+                NSString *achievementIdentifier = @"KF2downFK";
+                NSString *level1Id = @"KF111FK";
+                
+                GKAchievement *allClear = [[GKAchievement alloc] initWithIdentifier:achievementIdentifier];
+                GKAchievement *level1 = [[GKAchievement alloc] initWithIdentifier:level1Id];
+                
+                allClear.percentComplete = 100;
+                level1.percentComplete = 66;
+                
+                NSArray *achieved = @[allClear, level1];
+                [GKAchievement reportAchievements:achieved withCompletionHandler:^(NSError *error) {
+                    if (error != nil) {
+                        NSLog(@"%@", [error localizedDescription]);
+                    }
+                }];
+                
+                allClear.showsCompletionBanner = YES;
+                level1.showsCompletionBanner = YES;
+                
                 [_death2 runAction:die];
             }
             else if (sprite == _wiz)

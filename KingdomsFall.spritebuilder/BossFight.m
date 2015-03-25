@@ -82,14 +82,70 @@
                 CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:2.0f];
                 CCActionHide *hide = [CCActionHide action];
                 CCActionSequence *die = [CCActionSequence actions:show, fadeOut, hide, nil];
+                
+                NSString *achievementIdentifier = @"KF666FK";
+                NSString *level1Id = @"KF111FK";
+
+                GKAchievement *reaped = [[GKAchievement alloc] initWithIdentifier:achievementIdentifier];
+                GKAchievement *level1 = [[GKAchievement alloc] initWithIdentifier:level1Id];
+                
+                reaped.percentComplete = 100;
+                level1.percentComplete = 100;
+                
+                NSArray *achieved = @[reaped, level1];
+                [GKAchievement reportAchievements:achieved withCompletionHandler:^(NSError *error) {
+                    if (error != nil) {
+                        NSLog(@"%@", [error localizedDescription]);
+                    }
+                }];
+                
+                reaped.showsCompletionBanner = YES;
+                level1.showsCompletionBanner = YES;
+                
                 [_reaper runAction:die];
+                
             }
             
             
             return sprite;
-        }
+                    }
     }
+    
     return nil;
+}
+
+-(void)forTheMoney
+{
+    NSString *g2kId = @"KF2000FK";
+    NSString *acId = @"KF2downFK";
+    NSString *rcId = @"KF666FK";
+    NSString *levelId = @"KF111FK";
+    
+    GKAchievement *g2k = nil;
+    GKAchievement *ac = nil;
+    GKAchievement *rc = nil;
+    GKAchievement *level1 = nil;
+    
+    g2k = [[GKAchievement alloc] initWithIdentifier:g2kId];
+    ac = [[GKAchievement alloc] initWithIdentifier:acId];
+    rc = [[GKAchievement alloc] initWithIdentifier:rcId];
+    level1 = [[GKAchievement alloc] initWithIdentifier:levelId];
+    
+    NSLog(@"runnnn");
+    
+    
+
+    if (g2k.completed && ac.completed && rc.completed) {
+        level1.percentComplete = 100;
+        NSArray *achieved = @[level1];
+        [GKAchievement reportAchievements:achieved withCompletionHandler:^(NSError *error) {
+            if (error != nil) {
+                NSLog(@"%@", [error localizedDescription]);
+            }
+        }];
+        
+        level1.showsCompletionBanner = YES;
+    }
 }
 
 //Movement
@@ -114,6 +170,7 @@
 //Method for level completyion
 -(void)winning
 {
+
     GCSupport *score = [GCSupport alloc];
     score = [GCSupport sharedInstance];
     _winner.visible = true;

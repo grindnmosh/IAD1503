@@ -10,7 +10,7 @@
 
 @implementation GCSupport
 
-@synthesize gameCenterAvailable, goldPass;
+@synthesize gameCenterAvailable, goldPass, g2k;
 
 #pragma mark Initialization
 

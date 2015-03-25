@@ -7,6 +7,7 @@
 //
 
 #import "StartPoint.h"
+#import "GCSupport.h"
 
 @implementation StartPoint
 - (void)didLoadFromCCB {
@@ -24,6 +25,7 @@
     _story2Text.visible = FALSE;
     _dot2.visible = TRUE;
     _x2.visible = FALSE;
+    talked = FALSE;
 }
 
 
@@ -36,6 +38,22 @@
     [_knight runAction:moveNodeRight];
     if (_knight.position.x  >= width.width)
     {
+        if (talked == FALSE) {
+            NSString * talkedId = @"GoingItAlone";
+            
+            GKAchievement *noTalk = [[GKAchievement alloc] initWithIdentifier:talkedId];
+            
+            noTalk.percentComplete = 100;
+            
+            NSArray *achieved = @[noTalk];
+            [GKAchievement reportAchievements:achieved withCompletionHandler:^(NSError *error) {
+                if (error != nil) {
+                    NSLog(@"%@", [error localizedDescription]);
+                }
+            }];
+            
+            noTalk.showsCompletionBanner = YES;
+        }
         [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MarchBegins"]];
     }
 }
@@ -48,6 +66,7 @@
     _story1Text.visible = TRUE;
     _dot1.visible = FALSE;
     _x1.visible = TRUE;
+    talked = TRUE;
 }
 
 //NPC Chat Bubbles
@@ -58,6 +77,7 @@
     _story1Text.visible = FALSE;
     _dot1.visible = TRUE;
     _x1.visible = FALSE;
+    talked = TRUE;
 }
 
 //NPC Chat Bubbles

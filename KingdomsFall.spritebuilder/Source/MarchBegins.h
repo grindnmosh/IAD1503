@@ -36,7 +36,6 @@
     CGSize width;
     CCLabelTTF *_goldLabel;
     NSInteger goldAmount;
-    
 }
 
 

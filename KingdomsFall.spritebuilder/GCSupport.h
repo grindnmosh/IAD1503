@@ -15,10 +15,14 @@
     BOOL userAuthenticated;
     NSString *_leaderboardIdentifier;
     NSInteger *goldPass;
+    @public BOOL g2k;
+    BOOL ac;
+    BOOL rd;
 }
 
 @property (assign, readonly) BOOL gameCenterAvailable;
 @property (nonatomic, assign) NSInteger *goldPass;
+@property (nonatomic, assign) BOOL g2k;
 
 + (GCSupport *)sharedInstance;
 - (void)authenticateLocalUser;
